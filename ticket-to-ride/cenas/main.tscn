@@ -1,0 +1,192 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0xlaoq8a16oh"]
+
+[ext_resource type="Script" uid="uid://df0wtrsanv8f8" path="res://scripts/main.gd" id="1_t4ukd"]
+[ext_resource type="Texture2D" uid="uid://shj30q3xxmpm" path="res://assests/fundo.jpg" id="2_4fhxt"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_t4ukd")
+
+[node name="Board" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Board"]
+offset_left = 2.0
+offset_right = 1151.0
+offset_bottom = 1024.0
+texture = ExtResource("2_4fhxt")
+
+[node name="PlayerTurnLabel" type="Label" parent="Board"]
+offset_left = 21.0
+offset_top = 273.0
+offset_right = 136.0
+offset_bottom = 296.0
+text = "Vez do Jogador"
+
+[node name="ScoreLabel" type="Label" parent="Board"]
+offset_left = 22.0
+offset_top = 303.0
+offset_right = 113.0
+offset_bottom = 326.0
+text = "P1: 0 | P2: 0"
+
+[node name="RouteButton1" type="Button" parent="Board"]
+offset_left = 796.0
+offset_top = 206.0
+offset_right = 853.0
+offset_bottom = 237.0
+text = "Rota 1"
+
+[node name="RouteButton2" type="Button" parent="Board"]
+offset_left = 589.0
+offset_top = 482.0
+offset_right = 646.0
+offset_bottom = 513.0
+text = "Rota 2"
+
+[node name="RouteButton3" type="Button" parent="Board"]
+offset_left = 935.0
+offset_top = 388.0
+offset_right = 992.0
+offset_bottom = 419.0
+text = "Rota 3"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HandLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 75.0
+offset_right = 97.0
+offset_bottom = 98.0
+text = "Cartas: []"
+
+[node name="CardPanel" type="Control" parent="UI"]
+anchors_preset = 0
+
+[node name="OpenCard1" type="Button" parent="UI/CardPanel"]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 11.0
+offset_right = 948.0
+offset_bottom = 42.0
+text = "Azul"
+
+[node name="OpenCard2" type="Button" parent="UI/CardPanel"]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = 12.0
+offset_right = 1110.0
+offset_bottom = 43.0
+text = "Vermelho"
+
+[node name="OpenCard3" type="Button" parent="UI/CardPanel"]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 10.0
+offset_right = 1018.0
+offset_bottom = 41.0
+text = "Verde"
+
+[node name="DeckClosedButton" type="Button" parent="UI/CardPanel"]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 8.0
+offset_right = 892.0
+offset_bottom = 39.0
+text = "Comprar Fechada"
+
+[node name="TicketSelectionPanel" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TicketOption1" type="CheckBox" parent="TicketSelectionPanel"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 554.0
+offset_right = 98.0
+offset_bottom = 585.0
+text = "Ticket 1"
+
+[node name="TicketOption2" type="CheckBox" parent="TicketSelectionPanel"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 581.0
+offset_right = 98.0
+offset_bottom = 612.0
+text = "Ticket 2"
+
+[node name="TicketOption3" type="CheckBox" parent="TicketSelectionPanel"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 608.0
+offset_right = 99.0
+offset_bottom = 639.0
+text = "Ticket 3"
+
+[node name="ConfirmButton" type="Button" parent="TicketSelectionPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 524.0
+offset_right = 165.0
+offset_bottom = 555.0
+text = "Confirmar Seleção"
+
+[node name="ActionSelectionPanel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 380.0
+offset_top = 607.0
+offset_right = -9.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlaceTrainButton" type="Button" parent="ActionSelectionPanel"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 2.0
+offset_right = 455.0
+offset_bottom = 33.0
+text = "Colocar Trem"
+
+[node name="DrawCardsButton" type="Button" parent="ActionSelectionPanel"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 2.0
+offset_right = 595.0
+offset_bottom = 33.0
+text = "Comprar Cartas"
+
+[node name="BuyTicketsButton" type="Button" parent="ActionSelectionPanel"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 2.0
+offset_right = 300.0
+offset_bottom = 33.0
+text = "Comprar Bilhetes"
+
+[node name="EndGameButton" type="Button" parent="ActionSelectionPanel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 2.0
+offset_right = 758.0
+offset_bottom = 33.0
+text = "Encerrar Jogo"
+
+[node name="CancelActionButton" type="Button" parent="ActionSelectionPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 153.0
+offset_bottom = 33.0
+text = "Voltar"
