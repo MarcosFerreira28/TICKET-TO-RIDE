@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Ticket To Ride"
-run/main_scene="uid://c0xlaoq8a16oh"
+config/name="TicketToRide"
+run/main_scene="res://cenas/main.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://assests/icon.svg"
+config/icon="res://assets/icon.svg"
 
 [rendering]
 
