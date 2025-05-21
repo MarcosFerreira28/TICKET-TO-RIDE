@@ -43,9 +43,9 @@ var all_tickets = [
 @onready var cancel_action_button = action_panel.get_node("CancelActionButton")
 
 var route_requirements = {
-	"Route1": {"color": "red", "length": 3},
-	"Route2": {"color": "blue", "length": 2},
-	"Route3": {"color": "green", "length": 4},
+	"Route1": {"color": "Vermelho", "length": 3},
+	"Route2": {"color": "Azul", "length": 2},
+	"Route3": {"color": "Verde", "length": 4},
 }
 
 var open_card_colors = []
