@@ -7,12 +7,18 @@ var player_hands = [[], []]
 var claimed_routes = {}
 var ticket_selection_phase = true
 var player_tickets = [[], []]
-var colors = ["red", "blue", "green", "yellow"]
+var colors = ["Vermelho", "Azul", "Verde", "Amarelo", "Preto", "Roxo", "Branco", "Coringa"]
 var all_tickets = [
-	{ "from": "Paris", "to": "Berlin", "points": 8 },
-	{ "from": "Rome", "to": "London", "points": 12 },
-	{ "from": "Madrid", "to": "Moscow", "points": 20 },
-	{ "from": "Oslo", "to": "Athens", "points": 16 }
+	{ "from": "Rio Centro", "to": "Barra da Tijuca", "points": 8 },
+	{ "from": "Cidade de Deus", "to": "Niteroi", "points": 12 },
+	{ "from": "Itacoatiara", "to": "Botafogo", "points": 20 },
+	{ "from": "Buzios", "to": "Petrópolis", "points": 16 },
+	{ "from": "Buzios", "to": "Rio Centro", "points": 24 },
+	{ "from": "Niteroi", "to": "Rio Centro", "points": 18 },
+	{ "from": "Buzios", "to": "Tijuca", "points": 22 },
+	{ "from": "Itacoatiara", "to": "Ipanema", "points": 26 },
+	{ "from": "Buzios", "to": "Angra dos Reis", "points": 28 },
+	{ "from": "Angra dos Reis", "to": "Duque de Caxias", "points": 16 },
 ]
 
 @onready var board = $Board
@@ -37,9 +43,9 @@ var all_tickets = [
 @onready var cancel_action_button = action_panel.get_node("CancelActionButton")
 
 var route_requirements = {
-	"Route1": {"color": "red", "length": 3},
-	"Route2": {"color": "blue", "length": 2},
-	"Route3": {"color": "green", "length": 4},
+	"Route1": {"color": "Vermelho", "length": 3},
+	"Route2": {"color": "Azul", "length": 2},
+	"Route3": {"color": "Verde", "length": 4},
 }
 
 var open_card_colors = []
