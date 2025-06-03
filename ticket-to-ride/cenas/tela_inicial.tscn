@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2mwxrphon0wr"]
+
+[ext_resource type="Script" uid="uid://dgnt31mahl55n" path="res://scripts/tela_inicial.gd" id="1_e7n7l"]
+
+[node name="TelaInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e7n7l")
