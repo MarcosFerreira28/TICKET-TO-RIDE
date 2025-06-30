@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://calm2tfhiivyw"]
+
+[ext_resource type="Script" uid="uid://jp68nkg7idxf" path="res://scripts/tela_inicial.gd" id="1_e7n7l"]
+[ext_resource type="Texture2D" uid="uid://d3ridipxihmjq" path="res://assets/tela_inicial.jpg" id="2_24di4"]
+
+[node name="TelaInicial" type="Node2D"]
+script = ExtResource("1_e7n7l")
+
+[node name="Fundo" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 1280.0
+offset_bottom = 853.0
+texture = ExtResource("2_24di4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 100)
+offset_left = 393.0
+offset_top = 355.0
+offset_right = 693.0
+offset_bottom = 455.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="ButtonJogar" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+
+[node name="ButtonRegras" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
